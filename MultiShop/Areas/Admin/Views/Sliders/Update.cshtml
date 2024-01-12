@@ -1,0 +1,41 @@
+﻿@model SliderPutVM
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Edit Slider</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label">Title</label>
+                        <input class="form-control" asp-for="Title">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label">Description</label>
+                        <input class="form-control" asp-for="Description">
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="ButtonTitle" class="form-label">Button Title</label>
+                        <input class="form-control" asp-for="ButtonTitle">
+                        <span asp-validation-for="ButtonTitle" class="text-danger"></span>
+                    </div>
+
+                    <br />
+                    <br />
+                        <img width="300px" height="200px" src="~/img/@Model.ImagePath" />
+                    <div class="mb-3">
+                        <input asp-for="ImagePath" type="hidden" />
+
+                        <label asp-for="Image" class="form-label">Image</label>
+                        <input class="form-control" asp-for="Image">
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>

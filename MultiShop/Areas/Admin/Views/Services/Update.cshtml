@@ -1,0 +1,30 @@
+﻿@model ServicePutVM
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Create Service</h5>
+        <div class="card">
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label">Name</label>
+                        <input class="form-control" asp-for="Name">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <br />
+                    <br />
+                    <img width="300px" height="200px" src="~/img/@Model.IconPath" />
+                    <input asp-for="IconPath" type="hidden" />
+                    <div class="mb-3">
+                        <label asp-for="NewIconPath" class="form-label">NewIconPath</label>
+                        <input class="form-control" asp-for="NewIconPath">
+                        <span asp-validation-for="NewIconPath" class="text-danger"></span>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
